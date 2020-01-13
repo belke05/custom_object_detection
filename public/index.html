@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/my_style.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/search" method="POST">
+      <div class="form-group">
+        <label for="imgTerm">Google Search</label>
+        <input
+          name="imgTerm"
+          type="text"
+          class="form-control"
+          id="imgTerm"
+          aria-describedby="imgTermHelp"
+        />
+        <small id="imgTermHelp" class="form-text text-muted"
+          >program will use this as google image search term.</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="directoryName">directory to save in</label>
+        <input
+          name="directoryName"
+          type="text"
+          class="form-control"
+          id="directoryName"
+          aria-describedby="directoryNameHelp"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>
