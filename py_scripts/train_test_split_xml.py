@@ -1,4 +1,5 @@
 '''
+
 1 --- navigate to directory of this script then execute following sample command
 $ python train_test_split_xml.py -d fruitbasket -s 0.7
 

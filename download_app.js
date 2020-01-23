@@ -43,6 +43,6 @@ app.post("/search", async (req, res, next) => {
   }
 });
 
-server.listen(process.env.PORT || 5000, () => {
-  console.log(`Listening on http://localhost:${process.env.PORT || 5000}`);
+server.listen(process.env.PORT || 4000, () => {
+  console.log(`Listening on http://localhost:${process.env.PORT || 4000}`);
 });
