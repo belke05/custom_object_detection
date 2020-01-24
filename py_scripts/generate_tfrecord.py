@@ -45,6 +45,7 @@ def class_text_to_int(row_label):
         return 6
 
 
+
 def split(df, group):
     data = namedtuple('data', ['filename', 'object'])
     gb = df.groupby(group)
@@ -94,15 +95,20 @@ def create_tf_example(group, path):
 
 def main(_):
     # os.chdir('../images')
+    print('read split')
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
     path = os.path.join(FLAGS.image_dir)
     examples = pd.read_csv(FLAGS.csv_input)
+    
+    print('read split')
     grouped = split(examples, 'filename')
+    print('grouped split')
     for group in grouped:
         tf_example = create_tf_example(group, path)
         writer.write(tf_example.SerializeToString())
 
     writer.close()
+    print('writer closed')
     output_path = os.path.join(os.getcwd(), FLAGS.output_path)
     print('Successfully created the TFRecords: {}'.format(output_path))
 

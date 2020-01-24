@@ -19,7 +19,7 @@ train and test</li>
 - less than 200KB each
 - resolution < 720x1280.
 - use change_img_sizes in this repo if necessary
-- `$ python change_img_size.py -d fruitbasket -s 600 600`
+- `$ python change_img_size.py -d directorWithImages -s 600 600`
 
 ## 3 train test split
 
@@ -45,4 +45,20 @@ train and test</li>
 
 ## 5 TF_records
 
-move over all the created files of your image directory to drive
+move over all the created files of your image directory to drive there create the tf-records
+
+## 6 follow colab notebooks
+
+- model.ckpt data /model.ckpt index / model.ckpt meta
+
+- you can execute export inference graph but this won't be enough for deployment in production
+
+- and a saved_model directory
+
+1. follow the custom object detector directory
+2. make your first inference with the make inference in colab notebook
+3. make inference on own webcam image using jupyter notebook load model on webcam
+
+## 7 for production deployment
+
+description in export for production notebook
